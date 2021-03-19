@@ -1,7 +1,212 @@
-#menu
-{
-	position: fixed;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Luckiest+Guy&display=swap');
+
+body{
+	background-color: cadetblue;
+}
+#menu{
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 50% 50%;
 	width: 100%;
 	height: 35px;
-	background: white;
+	z-index: 99999;
+	background-color: #00aaff;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+}
+#oldman{
+	position: relative;
+	bottom: 10px;
+}
+#side2{
+	display: inline-block;
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 8px;
+
+
+}
+a{
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	color: blue;
+}
+.l{
+	color: white;
+}
+a:active{
+	color: red;
+}
+.section{
+	font-family: 'Luckiest Guy', cursive;;
+	text-align: center;
+	text-shadow: 2px 2px white;
+}
+#about p{
+	font-family: cursive;
+	font-size: 30px;
+	text-align: left;
+	text-shadow: none;
+}
+#dwarf{
+	position: relative;
+	top: 100px;
+}
+#photoes,#videos{
+	display: grid;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 33% 33% 33%;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	padding-top: 125px;
+	padding-left: 5px;
+}
+#photoes .images, .video{
+	min-width: auto;
+	width: 650px;
+	height: 400px;
+
+}
+#photoes image,iframe{
+	min-width: auto;
+	width: 100%;
+	height: 100%;
+}
+#photos h2{
+	text-shadow: none;
+}
+#like-me{
+	animation: color-change 1s infinite;
+	background-color: chocolate;
+	width: 150px;
+	height: 30px;
+	position: relative;
+	top: 120px;
+}
+#thanks {
+	animation: color-change-thx 2s infinite alternate ;
+	position: relative;
+	top: 200px;
+	font-size: xx-large;
+	text-shadow: none;
+}
+
+@keyframes color-change-thx {
+	0% { color: black; }
+	25% { color:grey; }
+	50% {color : lightgrey}
+	100% { color: white; }
+}
+
+#like-me:disabled,
+button[disabled]{
+	background-color: grey;
+	animation: none;
+}
+
+@keyframes color-change {
+	0% { color: red; }
+	50% { color: blue; }
+	100% { color: green; }
+}
+h1{
+	width: 100%;
+	height: 10px;
+	background-color: #00aaff;
+}
+h1 span {
+	display: inline-block;
+	min-width: 10%;
+	position: relative;
+	bottom: 10px;
+	background-color: burlywood;
+}
+
+.video{
+	width: 650px;
+	height: 400px;
+}
+iframe{
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 1950px) {
+	#videos{
+		grid-row-gap: 10px;
+	}
+	.video{
+		width: 600px;
+		height: 350px;
+	}
+
+}
+@media (max-width: 1800px) {
+	#videos{
+		grid-row-gap: 10px;
+	}
+	.video{
+		width: 550px;
+		height: 300px;
+	}
+
+}
+@media (max-width: 1650px) {
+	#videos{
+		grid-row-gap: 10px;
+	}
+	.video{
+		width: 500px;
+		height: 250px;
+	}
+
+}
+@media (max-width: 1500px) {
+	#videos{
+		grid-row-gap: 10px;
+	}
+	.video{
+		width: 450px;
+		height: 200px;
+	}
+
+}
+@media (max-width: 1350px) {
+	body{
+		overflow-x: hidden;
+	}
+	#side2{
+		font-size: 13px;
+	}
+	#playlist{
+		align-content: center;
+		justify-content: center;
+	}
+	#videos,#photoes{
+		grid-template-rows: 150px 150px 150px;
+		grid-template-columns: 250px 250px;
+		grid-row-gap: 120px;
+		grid-column-gap: 10px;
+		position: relative;
+		left: 25%;
+	}
+	.video{
+		width: 250px;
+		height: 250px;
+	}
+	h1{
+		width: 100%;
+	}
+
+}
+@media screen and (max-width: 900px){
+	#side2{
+		font-size: 7px;
+		position: relative;
+		top: 5px
+	}
 }
