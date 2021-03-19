@@ -4,6 +4,8 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" type="text/css" href="style.css" />
+ <script src = "https://smtpjs.com/v3/smtp.js"></script>
+ <script src="sender.js"></script>
 </head>
 <body>
 <div id="menu">
@@ -172,8 +174,53 @@
 <br/>
  <h1><span>Like Me!</span></h1>
  <div>
-  <button id="like-me" onclick="this.disabled = true;document.getElementById('thanks').hidden=false">Like Me!</button>
-  <h2 id="thanks" hidden="true">THANKS!</h2>
+  <button id=>Like Me <input type="checkbox" id="like-me"></button>
+  <h2 id="thanks" value="like"></h2>
+ </div>
+ <div id="likes">
+  <h3>Please give like to my official facebook page and to the official led zeppelin page :)</h3>
+  <table>
+   <tr>
+    <td class="table-cell">
+     <h5>Like for my facebook page</h5>
+    </td>
+    <td class="table-cell">
+     <iframe
+             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=50&layout=button_count&action=like&size=large&share=true&height=46&appId"
+             width="25px"
+             height="20px"
+             style="border:none;
+          overflow:hidden"
+             scrolling="no"
+             frameborder="0"
+             allowfullscreen="true"
+             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+     </iframe>
+    </td>
+   </tr>
+   <tr>
+    <td class="table-cell">
+     <h5>
+      Like for Led Zeppeline page
+     </h5>
+    </td>
+    <td class="table-cell">
+     <iframe
+             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fledzeppelin&width=50&layout=button_count&action=like&size=large&share=true&height=46&appId"
+             width="25px"
+             height="20px"
+             style="border:none;
+          overflow:hidden"
+             scrolling="no"
+             frameborder="0"
+             allowfullscreen="true"
+             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+
+     </iframe>
+    </td>
+   </tr>
+  </table>
+
  </div>
 <!-- <iframe
          src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=50&layout=box_count&action=like&size=large&share=true&height=65&appId"
@@ -210,6 +257,29 @@
 <br/>
 <br/>
 <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
  <h1><span>Scan My Code</span></h1>
 <br/>
 <br/>
@@ -257,7 +327,23 @@
 <br/>
 <br/>
 <h1><span>Contact Me</span></h1>
-<br/>
+ <form method="post">
+  <label for="mail">First name:</label><br>
+  <input type="email" id="mail" name="fname"><br>
+  <label for="msg">Messasge</label><br>
+  <textarea id="msg" ></textarea>
+  <br>
+  <select id="selection" onclick="addToText()">
+   <option></option>
+    <option class="opt"  value="😀">😀</option>
+   <option  class="opt" value="😁">😁</option>
+   <option  class="opt" value="😂">😂</option>
+   <option class="opt" value="☺️">☺️</option>
+   <option value="😜">😜</option>
+  </select>
+  <input type="button" value="send" onclick="sendEmail()">
+ </form>
+ <br/>
 <br/>
 <br/>
  <br/>

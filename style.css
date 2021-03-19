@@ -2,6 +2,7 @@
 
 body{
 	background-color: cadetblue;
+	counter-reset: likes 0;
 }
 #menu{
 	display: grid;
@@ -81,20 +82,29 @@ a:active{
 	text-shadow: none;
 }
 #like-me{
-	animation: color-change 1s infinite;
+	/*animation: color-change 1s infinite;
 	background-color: chocolate;
 	width: 150px;
 	height: 30px;
 	position: relative;
-	top: 120px;
+	top: 120px;*/
 }
-#thanks {
-	animation: color-change-thx 2s infinite alternate ;
+
+#like-me:checked{
+	counter-increment: likes;
+}
+
+
+
+#thanks:before {
+	content: counter(likes);
+}
+	/*animation: color-change-thx 2s infinite alternate ;
 	position: relative;
 	top: 200px;
 	font-size: xx-large;
-	text-shadow: none;
-}
+	text-shadow: none;*/
+
 
 @keyframes color-change-thx {
 	0% { color: black; }
@@ -114,10 +124,30 @@ button[disabled]{
 	50% { color: blue; }
 	100% { color: green; }
 }
+
+#likes{
+	position: relative;
+	top: 500px;
+}
+.facebook-like{
+	display: inline-block;
+	position: relative;
+	right: 47%;
+}
 h1{
 	width: 100%;
 	height: 10px;
 	background-color: #00aaff;
+}
+
+.table-cell{
+	width: 150px;
+	height: 50px;
+}
+
+table{
+	position: absolute;
+	left: 40%
 }
 h1 span {
 	display: inline-block;
@@ -126,7 +156,10 @@ h1 span {
 	bottom: 10px;
 	background-color: burlywood;
 }
-
+h5{
+	position: relative;
+	bottom: 10px;
+}
 .video{
 	width: 650px;
 	height: 400px;
