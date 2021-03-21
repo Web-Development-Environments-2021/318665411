@@ -23,7 +23,7 @@ const addToText= ()=> {
     if (chosen) {
         document.getElementById('message').value = text + chosen
     }
-    imogi.options[imogi.selectedIndex].text = imogi.options[0].text
+    imogi.selectedIndex = imogi.options[0]
 }
 
 
