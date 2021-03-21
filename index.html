@@ -5,6 +5,12 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" type="text/css" href="style.css" />
  <script src="sender.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+ <script>
+  (function() {
+   emailjs.init("user_VcIhMSyoRbDSmTqMbSajY");
+  })();
+ </script>
 </head>
 <body>
 <div id="menu">
@@ -32,10 +38,10 @@
 </div>-->
 		  
 <section id="about" class="section">
- <br/>
- <br/>
- <br/>
  <h1 class="header"><span>About me</span></h1>
+ <br/>
+ <br/>
+ <br/>
  <p dir="ltr">
   Hi,i am John, mabye you know me as J.R.R Tolkien, the writer of Lord of the rings and many other books like that.
   I was born in South Africa and moved to England when i was 4 years old. When i got a bit older i joined to the army and took part in WW1.
@@ -149,27 +155,41 @@
 
 <section id="like" class="section">
  <h1 class="header"><span>Like Me!</span></h1>
- <div id="like-area">
-   <input id="like-button" type="checkbox" name="like" value="like">
-   <span id="button">Give Me Like :)</span>
-  <h1 id="response" hidden>One Like To Rule Them All</h1>
+ <!--<div id="like-area">
+   <span id="button"><input id="like-button" type="checkbox" name="like" value="like"> Give Me Like :)</span>
  </div>
- <div id="likes">
-  <h3>Please give like to my official facebook page and to the official led zeppelin page :)</h3>
+ <h1 id="number"></h1>
+ <h1 id="thanks">One Like To Rule Them All</h1>
+ <div id="likes">-->
+  <h1 id="likes-head">Please give like to my official facebook page and to the official led zeppelin page :)</h1>
   <table>
+   <tr>
+    <td class="table-cell">Like My Web :)</td>
+   <td>
+    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb-development-environments-2021.github.io%2Fassignment1-roirein%2F&width=100&layout=button_count&action=like&size=large&share=true&height=46&appId"
+            width="150"
+            height="50"
+            style="border:none;
+            overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
+   </td>
+   <tr/>
    <tr>
     <td class="table-cell">
      <h5>Like for my facebook page</h5>
     </td>
     <td class="table-cell">
      <iframe
-             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=50&layout=button_count&action=like&size=large&share=true&height=46&appId"
-             width="25px"
-             height="20px"
+             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=100&layout=button_count&action=like&size=large&share=true&height=46&appId"
+             width="150"
+             height="50"
              style="border:none;
-          overflow:hidden"
-             scrolling="no"
-             frameborder="0"
+             overflow:hidden"
+             scrolling="no" frameborder="0"
              allowfullscreen="true"
              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
      </iframe>
@@ -184,10 +204,10 @@
     <td class="table-cell">
      <iframe
              src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fledzeppelin&width=50&layout=button_count&action=like&size=large&share=true&height=46&appId"
-             width="25px"
-             height="20px"
+             width="150px"
+             height="50px"
              style="border:none;
-          overflow:hidden"
+             overflow:hidden"
              scrolling="no"
              frameborder="0"
              allowfullscreen="true"
@@ -197,24 +217,15 @@
     </td>
    </tr>
   </table>
-
  </div>
-<!-- <iframe
-         src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=50&layout=box_count&action=like&size=large&share=true&height=65&appId"
-         width="50"
-         height="65"
-         style="border:none;
-         overflow:hidden"
-         scrolling="no"
-         frameborder="0"
-         allowfullscreen="true"
-         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-
- </iframe>-->
 
 <br/>
 <br/>
 <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
 </section>
 
 <section id="qrcoder" class="section">
@@ -259,7 +270,7 @@
  <br/>
  <h1 class="header"><span>Scan My Code</span></h1>
 <br/>
-<br/>
+ <img src="qrcode.png" width="300" height="300">
 <br/>
 </section>
 
@@ -304,24 +315,54 @@
 <br/>
 <br/>
 <h1 class="header"><span>Contact Me</span></h1>
- <form method="post" action="#">
-  <label for="mail">First name:</label><br>
-  <input type="email" id="mail" name="fname"><br>
-  <label for="msg">Messasge</label><br>
-  <textarea id="msg" ></textarea>
+<form id="sender">
+  <h1>Email Me :D</h1>
+ <input type="text" id="subject" name="subject" hidden>
+  <label for="fname">First Name:</label>
+  <input type="text" id="fname" placeholder="firstname"><br><br>
+  <label for="lname">Last Name:</label>
+  <input type="text" id="lname" placeholder="lastname"><br><br>
+  <label for="mail">Email: </label>
+  <input type="email" id="mail" placeholder="username@exaple.com"><br><br>
+  <label for="message">Your Messasge:</label>
+  <textarea id="message" placeholder="Your Message" name="body"></textarea><br>
   <br>
-  <select id="selection" onchange=addToText()>
-    <option class="opt"  value="😀">😀</option>
+  <br/>
+  <br/>
+ <br>
+ <br/>
+ <br/>
+ <br>
+ <br/>
+ <br/>
+  <select id="selection" onclick="addToText()">
+   <option></option>
+   <option class="opt"  value="😀">😀</option>
    <option  class="opt" value="😁">😁</option>
    <option  class="opt" value="😂">😂</option>
-   <option class="opt" value="☺️">☺️</option>
-   <option value="😜">😜</option>
+   <option class="opt" value="☺️">☺</option>
+   <option class="opt" value="😜">😜</option>
   </select>
-  <input type="button" value="send" onclick="sendEmail()">
+  <br>
+  <button onclick="sendEmail()"> send</button>
  </form>
  <br/>
 <br/>
 <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
+ <br/>
  <br/>
  <br/>
  <br/>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Ranchers&display=swap');
 
 body{
 	counter-reset: likes 19;
@@ -16,6 +16,7 @@ body{
 	color: chocolate;
 	z-index: 9999;
 	position: fixed;
+	left: 0;
 
 }
 
@@ -149,33 +150,66 @@ h2{
 
 #like{
 	background-color: goldenrod;
+	text-align: center;
+	font-family: 'Luckiest Guy', cursive;
 	position: relative;
 	top: 100px;
 }
-
-#like-area{
-	width: 200px;
-	height: 20px;
-	background-color: grey;
-	border: 2px solid black;
+.table-cell{
+	width: 300px;
+	height: 150px;
+}
+#like #likes-head{
 	text-align: center;
-	cursor: pointer;
+	font-size: 30px;
 	position: relative;
-	top: 30px;
-	left: 45%;
-
+	top: 100px;
 }
-#like-area:hover{
-	border-color: cyan;
-	box-shadow: 0 0 10px cyan;
-}
-
-#like-button{
-	opacity: 0;
-	cursor: pointer;
+.table-cell h5{
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+	bottom:13px
 }
 
+#like table{
+	position: relative;
+	left: 35%;
+	top: 200px;
+}
 
+#qrcoder img{
+	position: relative;
+	left: 40%;
+}
+#contact {
+	text-align: center;
+}
+
+form{
+	font-family: 'Chango', cursive;
+	font-size: 25px;
+	max-font-size: 25px;
+	position: relative;
+	top:50px;
+}
+label{
+	position: absolute;
+	left: 30%
+}
+
+input,textarea{
+	position: absolute;
+	left: 47%;
+	width: 200px;
+	max-width: 200px;
+}
+
+textarea{
+	width: 300px;
+	height: 150px;
+	max-width: 300px;
+}
 @media only screen and (max-width: 1200px) {
 	#menu{
 		font-size: 12px;
@@ -236,6 +270,7 @@ h2{
 
 	}
 }
+
 /*body{
 	background-color: cadetblue;
 	counter-reset: likes 0;
