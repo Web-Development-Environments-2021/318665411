@@ -148,6 +148,13 @@ h2{
 	max-width: 100%;
 }
 
+#playlist{
+	font-family: 'Luckiest Guy', cursive;
+	background-color: peru;
+	position: relative;
+	bottom: 140px;
+}
+
 #like{
 	background-color: goldenrod;
 	text-align: center;
@@ -190,6 +197,7 @@ h2{
 	background: darkorange;
 	width: 400px;
 	height: 400px;
+	max-width: 400px;
 	position: relative;
 	top: 100px;
 	left: 40%;
@@ -197,16 +205,16 @@ h2{
 
 #qrcoder div img{
 	position: relative;
-	top:45px;
-	left:5px;
+	top:50px;
 }
 #contact {
 	text-align: center;
 	background-color: wheat;
+	font-family: 'Chango', cursive;
 }
 
 #sender{
-	font-family: 'Chango', cursive;
+	text-align: center;
 	font-size: 25px;
 	max-font-size: 25px;
 	position: relative;
@@ -214,12 +222,12 @@ h2{
 }
 label{
 	position: absolute;
-	left: 30%
+	left: 15%;
 }
 
 input,textarea{
 	position: absolute;
-	left: 47%;
+	left: 55%;
 	width: 200px;
 	max-width: 200px;
 }
@@ -228,6 +236,25 @@ textarea{
 	width: 300px;
 	height: 150px;
 	max-width: 300px;
+}
+
+#sub{
+	width: 100px;
+	position: absolute;
+	left: 420px;
+	top:400px;
+}
+#selection{
+	height: 21px;
+	position: absolute;
+	right: 100px;
+	top: 147px;
+}
+
+#spa{
+	background-color: darksalmon;
+	position: relative;
+	bottom: 220px;
 }
 @media only screen and (max-width: 1200px) {
 	#menu{
@@ -242,31 +269,28 @@ textarea{
 		justify-content: center;
 		grid-template-rows: 33.3% 33.3% 33.3%;
 		grid-template-columns: 100%;
-		grid-row-gap: 20px;
+		grid-row-gap: 10px;
 	}
 	.col{
 		position: relative;
 		left: 180px;
 	}
 	.row .col img{
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 		max-width: 100%;
 	}
 
 	.row .col iframe{
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 		max-width: 100%;
 	}
+	#like table{
+		position: relative;
+		left: 20%;
+	}
 
-}
-
-#playlist{
-	font-family: 'Luckiest Guy', cursive;
-	background-color: peru;
-	position: relative;
-	bottom: 140px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -290,245 +314,3 @@ textarea{
 
 	}
 }
-
-/*body{
-	background-color: cadetblue;
-	counter-reset: likes 0;
-}
-#menu{
-	display: grid;
-	grid-template-rows: 100%;
-	grid-template-columns: 50% 50%;
-	width: 100%;
-	height: 35px;
-	z-index: 99999;
-	background-color: #00aaff;
-	position: fixed;
-	top:0;
-	left: 0;
-	right: 0;
-}
-#oldman{
-	position: relative;
-	bottom: 10px;
-}
-#side2{
-	display: inline-block;
-	text-align: right;
-	margin-right: 10px;
-	margin-top: 8px;
-}
-a{
-	font-family: 'Suez One', serif;
-	color: white;
-	text-decoration: none;
-}
-a:hover{
-	color: blue;
-}
-.l{
-	color: white;
-}
-a:active{
-	color: red;
-}
-.section{
-	font-family: 'Luckiest Guy', cursive;;
-	text-align: center;
-	text-shadow: 2px 2px white;
-}
-#about p{
-	font-family: cursive;
-	font-size: 30px;
-	text-align: left;
-	text-shadow: none;
-}
-#dwarf{
-	position: relative;
-	top: 100px;
-}
-#photoes,#videos{
-	display: grid;
-	grid-template-rows: 50% 50%;
-	grid-template-columns: 33% 33% 33%;
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
-	padding-top: 125px;
-	padding-left: 5px;
-}
-#photoes .images, .video{
-	min-width: auto;
-	width: 650px;
-	height: 400px;
-
-}
-#photoes image,iframe{
-	min-width: auto;
-	width: 100%;
-	height: 100%;
-}
-#photos h2{
-	text-shadow: none;
-}
-#like-me{
-	/*animation: color-change 1s infinite;
-	background-color: chocolate;
-	width: 150px;
-	height: 30px;
-	position: relative;
-	top: 120px;
-}
-
-#like-me:checked{
-	counter-increment: likes;
-}
-
-
-
-#thanks:before {
-	content: counter(likes);
-}
-	/*animation: color-change-thx 2s infinite alternate ;
-	position: relative;
-	top: 200px;
-	font-size: xx-large;
-	text-shadow: none;
-
-
-@keyframes color-change-thx {
-	0% { color: black; }
-	25% { color:grey; }
-	50% {color : lightgrey}
-	100% { color: white; }
-}
-
-#like-me:disabled,
-button[disabled]{
-	background-color: grey;
-	animation: none;
-}
-
-@keyframes color-change {
-	0% { color: red; }
-	50% { color: blue; }
-	100% { color: green; }
-}
-
-#likes{
-	position: relative;
-	top: 500px;
-}
-.facebook-like{
-	display: inline-block;
-	position: relative;
-	right: 47%;
-}
-h1{
-	width: 100%;
-	height: 10px;
-	background-color: #00aaff;
-}
-
-.table-cell{
-	width: 150px;
-	height: 50px;
-}
-
-table{
-	position: absolute;
-	left: 40%
-}
-h1 span {
-	display: inline-block;
-	min-width: 10%;
-	position: relative;
-	bottom: 10px;
-	background-color: burlywood;
-}
-h5{
-	position: relative;
-	bottom: 10px;
-}
-.video{
-	width: 650px;
-	height: 400px;
-}
-iframe{
-	width: 100%;
-	height: 100%;
-}
-@media (max-width: 1950px) {
-	#videos{
-		grid-row-gap: 10px;
-	}
-	.video{
-		width: 600px;
-		height: 350px;
-	}
-
-}
-@media (max-width: 1800px) {
-	#videos{
-		grid-row-gap: 10px;
-	}
-	.video{
-		width: 550px;
-		height: 300px;
-	}
-
-}
-@media (max-width: 1650px) {
-	#videos{
-		grid-row-gap: 10px;
-	}
-	.video{
-		width: 500px;
-		height: 250px;
-	}
-
-}
-@media (max-width: 1500px) {
-	#videos{
-		grid-row-gap: 10px;
-	}
-	.video{
-		width: 450px;
-		height: 200px;
-	}
-
-}
-@media (max-width: 1350px) {
-	body{
-		overflow-x: hidden;
-	}
-	#side2{
-		font-size: 13px;
-	}
-	#playlist{
-		align-content: center;
-		justify-content: center;
-	}
-	#videos,#photoes{
-		grid-template-rows: 150px 150px 150px;
-		grid-template-columns: 250px 250px;
-		grid-row-gap: 120px;
-		grid-column-gap: 10px;
-		position: relative;
-		left: 25%;
-	}
-	.video{
-		width: 250px;
-		height: 250px;
-	}
-	h1{
-		width: 100%;
-	}
-
-}
-@media screen and (max-width: 900px){
-	#side2{
-		font-size: 7px;
-		position: relative;
-		top: 5px
-	}
-}*/
