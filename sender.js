@@ -1,3 +1,13 @@
+function clearFields(){
+    alert("Opening Mail...")
+    setTimeout(()=>{
+        document.getElementById('fname').value=''
+        document.getElementById('lname').value=''
+        document.getElementById('mail').value=''
+        document.getElementById('message').value=''
+    },2000)
+}
+
 const addToText= ()=> {
     let text = document.getElementById('message').value
     const imogi = document.getElementById('selection')

@@ -18,7 +18,7 @@
   <span class="menu-tab"><a href="#play">My Playlist</a><span> | </span></span>
   <span class="menu-tab"><a href="#Li">Like</a><span> | </span></span>
   <span class="menu-tab"><a href="#qr">QR Code</a><span> | </span></span>
-  <span class="menu-tab"><a href="#spa">Q&A</a><span> | </span></span>
+  <span class="menu-tab"><a href="#sp">Q&A</a><span> | </span></span>
   <span class="menu-tab"><a href="#contact"> Contact Me</a></span>
  </div>
 </div>
@@ -229,11 +229,11 @@
   <h1>Email Me :D</h1>
   <div id="sender" style="background-color: cadetblue; margin-left: 30%; margin-right: 30%; height: 450px">
    <br>
-   <form action="mailto:roirein@post.bgu.ac.il" method="post" onsubmit="sendEmail()">
+   <form action="mailto:roirein@post.bgu.ac.il" method="POST" enctype="text/plain">
     <label for="fname" >First Name:</label>
-    <input type="text" id="fname" placeholder="firstname" name="first name"><br><br>
+    <input type="text" id="fname" placeholder="firstname" name="first_name"><br><br>
     <label for="lname">Last Name:</label>
-    <input type="text" id="lname" placeholder="lastname" name="last name"><br><br>
+    <input type="text" id="lname" placeholder="lastname" name="last_name"><br><br>
     <label for="mail">Email: </label>
     <input type="email" id="mail" placeholder="username@exaple.com" name="email"><br><br>
     <label for="message">Your Messasge:</label>
@@ -261,7 +261,7 @@
      <option class="opt" value="🤠">🤠</option>
      <option class="opt" value="😌">😌</option>
     </select>
-    <input id="sub" type="submit" value="Send">
+    <input id="sub" type="submit" value="Send" onclick="clearFields()">
    </form>
   </div>
  <br/>
