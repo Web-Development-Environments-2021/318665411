@@ -207,10 +207,13 @@ h2{
 	position: relative;
 	top:50px;
 }
+
 #contact {
 	text-align: center;
 	background-color: wheat;
 	font-family: 'Chango', cursive;
+	position: relative;
+	bottom: 240px;
 }
 
 #sender{
@@ -253,6 +256,7 @@ textarea{
 
 #spa{
 	background-color: darksalmon;
+	font-family: 'Chango', cursive;
 	position: relative;
 	bottom: 220px;
 }
