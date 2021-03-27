@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,14 +129,14 @@
 <section id="like" class="section">
  <h1 class="header"><span>Like Me!</span></h1>
  <h1 id="likes-head">Please give like to my official facebook page and to the official led zeppelin page :)</h1>
- <table>
-  <tr>
-   <td class="table-cell">
+ <div id="table-area">
+  <div class="trow">
+   <div class="tcol">
     <h5>
      Like My Web :)
     </h5>
-   </td>
-   <td>
+   </div>
+   <div class="tcol">
     <iframe
             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fweb-development-environments-2021.github.io%2Fassignment1-roirein%2F&width=150&layout=button_count&action=like&size=large&share=false&height=21&appId"
             width="150"
@@ -148,45 +148,48 @@
             allowfullscreen="true"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
     </iframe>
-   </td>
-  <tr/>
-  <tr>
-   <td class="table-cell">
-    <h5>Like for my facebook page</h5>
-   </td>
-   <td class="table-cell">
-    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=150&layout=button_count&action=like&size=large&share=false&height=21&appId"
-            width="150"
-            height="50"
-            style="border:none;
+   </div>
+  </div>
+   <div class="trow">
+    <div class="tcol">
+     <h5>
+      Like for my facebook page
+     </h5>
+    </div>
+    <div class="tcol">
+     <iframe
+             src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fofficialtolkien&width=150&layout=button_count&action=like&size=large&share=false&height=21&appId"
+             width="150"
+             height="50"
+             style="border:none;
              overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-    </iframe>
-   </td>
-  </tr>
-  <tr>
-   <td class="table-cell">
-    <h5>
-     Like for Led Zeppeline page
-    </h5>
-   </td>
-   <td class="table-cell">
-    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fledzeppelin&width=150&layout=button_count&action=like&size=large&share=false&height=21&appId"
-            width="150"
-            height="50"
-            style="border:none;
+             scrolling="no"
+             frameborder="0"
+             allowfullscreen="true"
+             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+     </iframe>
+    </div>
+   </div>
+    <div class="trow">
+     <div class="tcol">
+      <h5>
+       Like for Led Zeppeline page
+      </h5>
+     </div>
+     <div class="tcol">
+      <iframe
+              src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fledzeppelin&width=150&layout=button_count&action=like&size=large&share=false&height=21&appId"
+              width="150"
+              height="50"
+              style="border:none;
              overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-    </iframe>
-   </td>
-  </tr>
- </table>
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+     </div>
+  </div>
  </div>
  <br/>
  <br/>
@@ -196,12 +199,12 @@
  <br/>
  <br/>
 </section>
-<div id="qr" style="background: goldenrod; width: 100%; height: 100px; position: relative; bottom:180px"></div>
+<div id="qr" style="background: goldenrod; width: 100%; height: 100px; position: relative; bottom:180px;" ></div>
 <section id="qrcoder" class="section">
  <h1 class="header"><span>Scan My Code</span></h1>
  <br/>
  <h1>Here You Can Scan My QR Code!</h1>
- <div style="background: darkorange; width: 400px; height: 400px">
+ <div>
   <img src="qrcode.png" width="300" height="300">
  </div>
  <br/>
@@ -242,48 +245,68 @@
 <section id="contact" class="section">
  <h1 class="header"><span>Contact Me</span></h1>
   <h1>Email Me :D</h1>
-  <div id="sender" style="background-color: cadetblue; margin-left: 30%; margin-right: 30%; height: 450px">
    <br>
    <form action="mailto:roirein@post.bgu.ac.il" method="POST" enctype="text/plain">
-    <label for="fname" >First Name:</label>
-    <input type="text" id="fname" placeholder="firstname" name="first_name"><br><br>
-    <label for="lname">Last Name:</label>
-    <input type="text" id="lname" placeholder="lastname" name="last_name"><br><br>
-    <label for="mail">Email: </label>
-    <input type="email" id="mail" placeholder="username@exaple.com" name="email"><br><br>
-    <label for="message">Your Messasge:</label>
-    <textarea id="message" placeholder="Your Message" name="message"></textarea><br>
-    <select id="selection" onclick="addToText()" style="position: relative;bottom: 3px">
-     <option>Pick an Emoji</option>
-     <option class="opt"  value="😀">😀</option>
-     <option  class="opt" value="😁">😁</option>
-     <option  class="opt" value="😂">😂</option>
-     <option class="opt" value="😜">😜</option>
-     <option class="opt" value="😆">😆</option>
-     <option class="opt" value="🤗">🤗</option>
-     <option class="opt" value="😉">😉</option>
-     <option class="opt" value="😎">😎</option>
-     <option class="opt" value="😮">😮</option>
-     <option class="opt" value="❤️">❤️</option>
-     <option class="opt" value="🤭">🤭</option>
-     <option class="opt" value="🤓">🤓</option>
-     <option class="opt" value="👴">👴</option>
-     <option class="opt" value="🙏">🙏</option>
-     <option class="opt" value=" 💪"> 💪</option>
-     <option class="opt" value="👽">👽</option>
-     <option class="opt" value="💩">💩</option>
-     <option class="opt" value="🤭">🤭</option>
-     <option class="opt" value="🤠">🤠</option>
-     <option class="opt" value="😌">😌</option>
-    </select>
-    <input id="sub" type="submit" value="Send" onclick="clearFields()">
+    <div class="labels">
+     <label for="fname" >First Name:</label>
+    </div>
+    <div class="inputs">
+     <input type="text" id="fname" placeholder="firstname" name="first_name"><br><br>
+    </div>
+    <div class="labels">
+     <label for="lname">Last Name:</label>
+    </div>
+    <div class="inputs">
+     <input type="text" id="lname" placeholder="lastname" name="last_name"><br><br>
+    </div>
+    <div class="labels">
+     <label for="mail">Email: </label>
+    </div>
+    <div class="inputs">
+     <input type="email" id="mail" placeholder="username@exaple.com" name="email"><br><br>
+    </div>
+    <div class="labels">
+     <label for="message">Your Messasge:</label>
+    </div>
+    <div class="inputs">
+     <textarea id="message" placeholder="Your Message" name="message"></textarea><br>
+    </div>
+    <div class="inputs">
+     <select id="selection" onclick="addToText()">
+      <option>Pick an Emoji</option>
+      <option class="opt"  value="😀">😀</option>
+      <option  class="opt" value="😁">😁</option>
+      <option  class="opt" value="😂">😂</option>
+      <option class="opt" value="😜">😜</option>
+      <option class="opt" value="😆">😆</option>
+      <option class="opt" value="🤗">🤗</option>
+      <option class="opt" value="😉">😉</option>
+      <option class="opt" value="😎">😎</option>
+      <option class="opt" value="😮">😮</option>
+      <option class="opt" value="❤️">❤️</option>
+      <option class="opt" value="🤭">🤭</option>
+      <option class="opt" value="🤓">🤓</option>
+      <option class="opt" value="👴">👴</option>
+      <option class="opt" value="🙏">🙏</option>
+      <option class="opt" value=" 💪"> 💪</option>
+      <option class="opt" value="👽">👽</option>
+      <option class="opt" value="💩">💩</option>
+      <option class="opt" value="🤭">🤭</option>
+      <option class="opt" value="🤠">🤠</option>
+      <option class="opt" value="😌">😌</option>
+     </select>
+    </div>
+    <div class="inputs" id="sub">
+     <input type="submit" value="Send" onclick="clearFields()">
+    </div>
    </form>
-  </div>
  <br/>
  <br/>
  <br/>
  <br/>
-Roi Reinshtein&copy;2021
+ <div id="cr">
+  Roi Reinshtein&copy;2021
+ </div>
  <br/>
  <br/>
  <br/>

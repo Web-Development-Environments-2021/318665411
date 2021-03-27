@@ -51,11 +51,13 @@ body{
 	color: chocolate;
 }
 #menu-bar a:hover{
-	animation: color-change-hover 2s;
+	animation: color-change-hover 1s;
+	color: burlywood;
 }
 
 #menu-bar a:active{
 	animation: color-change-active 1s;
+	color: red;
 }
 @keyframes color-change-hover {
 	from{color: chocolate;}
@@ -125,17 +127,17 @@ h2{
 .row{
 	display: grid;
 	justify-content: center;
+	align-content: center;
 	grid-template-columns: 30% 30% 30%;
 	grid-template-rows: 50% 50%;
-	grid-row-gap: 50px;
+	grid-auto-columns: 30% 30% 30%;
+	grid-auto-rows: 50% 50%;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
 	position: relative;
 	top:50px;
 }
 
-.col{
-	position: relative;
-	left: 50px;
-}
 .row .col img{
 	width: 500px;
 	height: 500px;
@@ -162,28 +164,45 @@ h2{
 	position: relative;
 	bottom: 180px;
 }
-.table-cell{
-	width: 300px;
-	height: 150px;
+
+#table-area{
+	background-color: gold;
+	height: 500px;
+	width: 500px;
+	max-width: 500px;
+	position: relative;
+	left: 35%;
+	top: 140px;
 }
+
+.trow{
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-rows: 100%;
+	grid-template-columns: 50% 50%;
+	grid-auto-flow: column;
+	grid-auto-rows: 50% 50%;
+	position: relative;
+	top: 40px;
+	padding-top: 20px;
+}
+
+.tcol{
+	font-size: 25px;
+}
+
+.tcol iframe{
+	position: relative;
+	top: 35px;
+}
+
+
 #like #likes-head{
 	text-align: center;
 	font-size: 30px;
 	position: relative;
 	top: 100px;
-}
-.table-cell h5{
-	font-size: 20px;
-	text-align: center;
-	position: relative;
-	bottom:13px
-}
-
-#like table{
-	background-color: gold;
-	position: relative;
-	left: 35%;
-	top: 135px;
 }
 
 #qrcoder{
@@ -197,7 +216,6 @@ h2{
 	background: darkorange;
 	width: 400px;
 	height: 400px;
-	max-width: 400px;
 	position: relative;
 	top: 100px;
 	left: 40%;
@@ -209,49 +227,53 @@ h2{
 }
 
 #contact {
-	text-align: center;
 	background-color: wheat;
 	font-family: 'Chango', cursive;
 	position: relative;
 	bottom: 240px;
 }
 
-#sender{
-	text-align: center;
-	font-size: 25px;
-	max-font-size: 25px;
-	position: relative;
-	top:50px;
-}
 label{
-	position: absolute;
-	left: 15%;
+	display: inline-block;
 }
 
-input,textarea{
-	position: absolute;
-	left: 55%;
-	width: 200px;
-	max-width: 200px;
+.labels{
+	width: 25%;
+	font-size: 25px;
 }
 
-textarea{
-	width: 300px;
-	height: 150px;
-	max-width: 300px;
+.inputs{
+	width: 75%;
+	position: relative;
+	bottom: 30px;
 }
 
 #sub{
-	width: 100px;
-	position: absolute;
-	left: 420px;
-	top:400px;
+	position: relative;
+	top: 20px;
 }
+input,textarea,select{
+	width: 100%;
+	height: 30px;
+	position: relative;
+	left: 30%;
+	resize: vertical;
+}
+
 #selection{
-	height: 21px;
-	position: absolute;
-	right: 100px;
-	top: 147px;
+	position: relative;
+	top: 20px;
+}
+textarea{
+	height: 60px;
+}
+
+#contact h1{
+	text-align: center;
+}
+
+#cr{
+	text-align: center;
 }
 
 #spa{
@@ -268,20 +290,33 @@ textarea{
 		position: relative;
 		top: 4px
 	}
+	#table-area{
+		position: relative;
+		left: 20%;
+	}
+	label{
+		font-size: 15px;
+	}
+
+}
+
+@media only screen and (max-width: 900px) {
 	.row{
-		display: inline-grid;
+		display: grid;
 		justify-content: center;
-		grid-template-rows: 33.3% 33.3% 33.3%;
+		align-content: center;
+		grid-template-rows: 30% 30% 30%;
 		grid-template-columns: 100%;
-		grid-row-gap: 10px;
+		grid-row-gap: 20px;
+		padding: 20px;
 	}
 	.col{
 		position: relative;
-		left: 180px;
+		left: 35%;
 	}
 	.row .col img{
-		width: 200px;
-		height: 200px;
+		width: 250px;
+		height: 250px;
 		max-width: 100%;
 	}
 
@@ -289,10 +324,6 @@ textarea{
 		width: 200px;
 		height: 200px;
 		max-width: 100%;
-	}
-	#like table{
-		position: relative;
-		left: 20%;
 	}
 
 }
@@ -303,9 +334,22 @@ textarea{
 	}
 	#menu-bar .menu-tab{
 		position: relative;
-		top: 5px
-
+		top: 5px;
 	}
+	#qrcoder div{
+		width: 250px;
+		height: 250px;
+		position: absolute;
+		left: 5%;
+		z-index: 9999;
+	}
+
+	#qrcoder div img{
+		width: 150px;
+		height: 150px;
+	}
+
+
 }
 
 @media only screen and (max-width: 660px) {
@@ -316,5 +360,32 @@ textarea{
 		position: relative;
 		top: 7px
 
+	}
+	.col{
+		position: relative;
+		left: 20%;
+	}
+	#table-area{
+		width: 350px;
+		height: 400px;
+		position: relative;
+		left: 5%;
+	}
+	.tcol{
+		position:relative;
+		bottom: 50px;
+
+	}
+	.inputs{
+		width: 50%;
+		position: relative;
+		left: 25%;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.col{
+		position: relative;
+		left: 10%;
 	}
 }
